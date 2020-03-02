@@ -35,7 +35,7 @@ Example
 chr1	1233873	.	T	C,<NON_REF>	0	.	BaseQRankSum=-2.063;ClippingRankSum=0.000;DP=13;ExcessHet=3.0103;MLEAC=0,0;MLEAF=0.00,0.00;MQRankSum=0.000;RAW_MQ=46800.00;ReadPosRankSum=-1.391	GT:AD:DP:GQ:PGT:PID:PL:SB	0/0:11,2,0:13:25:1|0:1233870_A_C:0,25,415,39,420,434:6,5,2,0
 
 
-# Phred-scaled p-value for exact test of excess heterozygosity.
+# Phred-scaled p-value for exact test of excess heterozygosity (ExcessHet)
 This annotation estimates the probability of the called samples exhibiting excess heterozygosity with respect to the 
 null hypothesis that the samples are unrelated. 
 The higher the score, the higher the chance that the variant is a technical artifact or that there is consanguinuity 
@@ -50,7 +50,7 @@ Example
 chr1	1233873	.	T	C,<NON_REF>	0	.	BaseQRankSum=-2.063;ClippingRankSum=0.000;DP=13;ExcessHet=3.0103;MLEAC=0,0;MLEAF=0.00,0.00;MQRankSum=0.000;RAW_MQ=46800.00;ReadPosRankSum=-1.391	GT:AD:DP:GQ:PGT:PID:PL:SB	0/0:11,2,0:13:25:1|0:1233870_A_C:0,25,415,39,420,434:6,5,2,0
 
 
-# InbreedingCoeff
+# InbreedingCoeff (InbreedingCoeff)
 Likelihood-based test for the consanguinuity among samples
 This annotation estimates whether there is evidence of consanguinuity in a population. 
 The higher the score, the higher the chance that some samples are related. 
@@ -76,7 +76,7 @@ Example
 chr1	1233873	.	T	C,<NON_REF>	0	.	BaseQRankSum=-2.063;ClippingRankSum=0.000;DP=13;ExcessHet=3.0103;MLEAC=0,0;MLEAF=0.00,0.00;MQRankSum=0.000;RAW_MQ=46800.00;ReadPosRankSum=-1.391	GT:AD:DP:GQ:PGT:PID:PL:SB	0/0:11,2,0:13:25:1|0:1233870_A_C:0,25,415,39,420,434:6,5,2,0
 
 
-# FisherStrand
+# FisherStrand (FS)
 Strand bias estimated using Fisher's Exact Test
 Strand bias is a type of sequencing bias in which one DNA strand is favored over the other, which can result in incorrect evaluation of the amount of evidence observed for one allele vs. the other. The FisherStrand annotation is one of several methods that aims to evaluate whether there is strand bias in the data. It uses Fisher's Exact Test to determine if there is strand bias between forward and reverse strands for the reference or alternate allele.
 
@@ -95,7 +95,7 @@ Example
 chr1	1233873	.	T	C,<NON_REF>	0	.	BaseQRankSum=-2.063;ClippingRankSum=0.000;DP=13;ExcessHet=3.0103;MLEAC=0,0;MLEAF=0.00,0.00;MQRankSum=0.000;RAW_MQ=46800.00;ReadPosRankSum=-1.391	GT:AD:DP:GQ:PGT:PID:PL:SB	0/0:11,2,0:13:25:1|0:1233870_A_C:0,25,415,39,420,434:6,5,2,0
 
 
-# StrandOddsRatio
+# StrandOddsRatio (SOR)
 Allele-specific strand bias estimated by the Symmetric Odds Ratio test
 Strand bias is a type of sequencing bias in which one DNA strand is favored over the other, which can result in incorrect evaluation of the amount of evidence observed for one allele vs. the other. The AS_StrandOddsRatio annotation is one of several methods that aims to evaluate whether there is strand bias in the data. It is an updated form of the Fisher Strand Test that is better at taking into account large amounts of data in high coverage situations. It is used to determine if there is strand bias between forward and reverse strands for the reference or alternate allele. It does so separately for each allele. The reported value is ln-scaled.
 
@@ -105,7 +105,7 @@ Example
 chr1	1233873	.	T	C,<NON_REF>	0	.	BaseQRankSum=-2.063;ClippingRankSum=0.000;DP=13;ExcessHet=3.0103;MLEAC=0,0;MLEAF=0.00,0.00;MQRankSum=0.000;RAW_MQ=46800.00;ReadPosRankSum=-1.391	GT:AD:DP:GQ:PGT:PID:PL:SB	0/0:11,2,0:13:25:1|0:1233870_A_C:0,25,415,39,420,434:6,5,2,0
 
 
-# StrandBiasBySample
+# StrandBiasBySample (SB)
 Number of forward and reverse reads that support REF and ALT alleles
 Strand bias is a type of sequencing bias in which one DNA strand is favored over the other, which can result in incorrect evaluation of the amount of evidence observed for one allele vs. the other. The StrandBiasBySample annotation produces read counts per allele and per strand that are used by other annotation modules (FisherStrand and StrandOddsRatio) to estimate strand bias using statistical approaches.
 
@@ -121,7 +121,7 @@ Example
 chr1	1233873	.	T	C,<NON_REF>	0	.	BaseQRankSum=-2.063;ClippingRankSum=0.000;DP=13;ExcessHet=3.0103;MLEAC=0,0;MLEAF=0.00,0.00;MQRankSum=0.000;RAW_MQ=46800.00;ReadPosRankSum=-1.391	GT:AD:DP:GQ:PGT:PID:PL:SB	0/0:11,2,0:13:25:1|0:1233870_A_C:0,25,415,39,420,434:6,5,2,0
 
 
-# QualByDepth
+# QualByDepth (QD)
 Variant confidence normalized by unfiltered depth of variant samples
 This annotation puts the variant confidence QUAL score into perspective by normalizing for the amount of coverage available. Because each read contributes a little to the QUAL score, variants in regions with deep coverage can have artificially inflated QUAL scores, giving the impression that the call is supported by more evidence than it really is. To compensate for this, we normalize the variant confidence by depth, which gives us a more objective picture of how well supported the call is.
 
@@ -135,7 +135,7 @@ Example
 chr1	1233873	.	T	C,<NON_REF>	0	.	BaseQRankSum=-2.063;ClippingRankSum=0.000;DP=13;ExcessHet=3.0103;MLEAC=0,0;MLEAF=0.00,0.00;MQRankSum=0.000;RAW_MQ=46800.00;ReadPosRankSum=-1.391	GT:AD:DP:GQ:PGT:PID:PL:SB	0/0:11,2,0:13:25:1|0:1233870_A_C:0,25,415,39,420,434:6,5,2,0
 
 
-# Coverage
+# Coverage (DP)
 Total depth of coverage per sample and over all samples (DP)
 This annotation is used to provide counts of read depth at two different levels, with some important differences. At the sample level (FORMAT), the DP value is the count of reads that passed the caller's internal quality control metrics (such as MAPQ > 17, for example). At the site level (INFO), the DP value is the unfiltered depth over all samples.
 
@@ -188,7 +188,4 @@ chr1	1233873	.	T	C,<NON_REF>	0	.	BaseQRankSum=-2.063;ClippingRankSum=0.000;DP=13
 
 
 
-
-
-URL: https://gatk.broadinstitute.org/hc/en-us/articles/360036821931-QualByDepth
 
