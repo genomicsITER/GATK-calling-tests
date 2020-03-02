@@ -5,7 +5,7 @@ As seen by HaplotypeCaller
 
 annotation=[HaplotypeScore, MappingQualityRankSumTest, QualByDepth, ReadPosRankSumTest, RMSMappingQuality, FisherStrand, Coverage, StrandBiasBySample]
 
-# Rank Sum Test of REF versus ALT base quality scores
+# Rank Sum Test of REF versus ALT base quality scores (BaseQRankSum)
 This variant-level annotation tests compares the base qualities of the data supporting the reference allele with those supporting the alternate allele. 
 The ideal result is a value close to zero, which indicates there is little to no difference. 
 A negative value indicates that the bases supporting the alternate allele have lower quality scores than those supporting 
@@ -20,7 +20,7 @@ Example
 chr1	1233873	.	T	C,<NON_REF>	0	.	BaseQRankSum=-2.063;ClippingRankSum=0.000;DP=13;ExcessHet=3.0103;MLEAC=0,0;MLEAF=0.00,0.00;MQRankSum=0.000;RAW_MQ=46800.00;ReadPosRankSum=-1.391	GT:AD:DP:GQ:PGT:PID:PL:SB	0/0:11,2,0:13:25:1|0:1233870_A_C:0,25,415,39,420,434:6,5,2,0
 
 
-# Rank Sum Test for hard-clipped bases on REF versus ALT reads
+# Rank Sum Test for hard-clipped bases on REF versus ALT reads (ClippingRankSum)
 This variant-level annotation tests whether the data supporting the reference allele shows more or less base clipping 
 (hard clips) than those supporting the alternate allele. 
 The ideal result is a value close to zero, which indicates there is little to no difference. 
